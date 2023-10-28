@@ -47,24 +47,6 @@ $fw-bold: 700;
 }
 
 @font-face {
-    font-family: "Nunito Italic";
-    src: url("../fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Exo2";
-    src: url("../fonts/Exo2-VariableFont_wght.ttf") format("truetype");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Exo2 Italic";
-    src: url("../fonts/Exo2-Italic-VariableFont_wght.ttf") format("truetype");
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Caveat";
     src: url("../fonts/Caveat-VariableFont_wght.ttf") format("truetype");
     font-display: swap;
@@ -76,18 +58,6 @@ $fw-bold: 700;
 
 @mixin Nunito {
     font-family: "Nunito", sans-serif;
-}
-
-@mixin NunitoItalic {
-    font-family: "Nunito Italic", sans-serif;
-}
-
-@mixin Exo2 {
-    font-family: "Exo2", sans-serif;
-}
-
-@mixin Exo2Italic {
-    font-family: "Exo2 Italic", sans-serif;
 }
 
 @mixin Caveat {
@@ -471,8 +441,6 @@ section {
             font-weight: 600;
             text-shadow: 0 0 10px $clr-white;
         }
-
-        // &-btn {}
     }
 }
 
