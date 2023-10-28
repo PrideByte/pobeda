@@ -203,7 +203,7 @@ h6 {
     font-weight: 800;
     text-transform: uppercase;
     text-shadow: 0 0 18px $clr-white;
-    background-image: linear-gradient(to bottom, rgba(#f3f3f3, .6) 33%, $clr-blue 33% 66%, $clr-red-200 66%);
+    background-image: linear-gradient(to bottom, rgba(#e2e2e2, .6) 33%, $clr-blue 33% 66%, $clr-red-200 66%);
 
     span {
         display: inline-block;
@@ -280,9 +280,11 @@ section {
     &__img {
         height: 100%;
         margin-right: 10px;
+        border-radius: 50%;
     }
 
     &__title {
+        @include Caveat();
         @include fsz-title();
         margin: 0;
         background: none;
@@ -358,11 +360,11 @@ section {
         position: relative;
 
         &__list {
+            @include fsz-menu();
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: flex-end;
-            @include fsz-menu();
         }
 
         &__item {
