@@ -173,16 +173,17 @@ $fw-bold: 700;
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
 body {
     @include Nunito();
     @include fsz-main();
+    position: relative;
     line-height: 1.2;
     color: $clr-gray-800;
     font-weight: $fw-normal;
-    position: relative;
 }
 
 ul,
@@ -238,6 +239,11 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+textarea,
+input[type="text"] {
+    color: $clr-gray-600;
+}
+
 button {
     @include fsz-main();
     padding: 20px 40px;
@@ -256,6 +262,10 @@ input[type="button"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
     outline: 1px solid $clr-gray-700;
+}
+
+button:disabled {
+    color: $clr-gray-500;
 }
 
 section {
@@ -638,6 +648,10 @@ svg path {
 
 //******Payment******
 .payment {
+    &__description {
+        margin-bottom: 20px;
+    }
+
     &__details {
         display: flex;
         flex-direction: row;
@@ -675,26 +689,69 @@ svg path {
 }
 
 
+//******Letter******
+.letter {
+    &__form {
+        max-width: 500px;
+        margin: 0 auto;
+    
+        &-label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        &-title {
+            padding-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            @include fsz-details();
+            width: 100%;
+            padding: 10px;
+        }
+        
+        textarea {
+            height: 145px;
+            resize: none;
+            line-height: 1.2;
+        }
+    }
+}
+
+
 //******Gallery******
 .gallery {
+    --items-to-show: 3;
 
     &__slider {
+        position: relative;
         display: flex;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
     }
 
     &__row {
         position: relative;
         display: flex;
         gap: 20px;
+        margin: 0 auto;
         flex-direction: row;
-        align-items: center;
-        transform: translate(0);
+        flex-wrap: nowrap;
+        // align-items: center;
         transition: transform .2s ease-in-out;
-        overflow: hidden;
     }
 
     &__photo {
-        width: calc(100% / 3);
+        --block-width: calc((var(--width) - (20px + 65px * 2)) / var(--items-to-show) - 10px);
+
+        width: var(--block-width);
         flex-shrink: 0;
 
         &-img {

@@ -13,7 +13,6 @@ function startAnimation(elementsArray, i) {
         const element = elementsArray[i];
         const elementPathLength = element.getTotalLength();
         setTimeout(function (event) {
-            console.log('animation ended')
             resolve();
         }, 5000);
 
