@@ -626,9 +626,32 @@ svg path {
         align-items: center;
         justify-content: center;
 
-        &-aside {
+        &-list {
             width: 30%;
+            
+            &__addr {
+                @include fsz-menu();
+                position: relative;
+                padding-left: 20px;
+                font-weight: 600;
+                
+                &::before {
+                    @include Icomoon();
+                    content: '\e948';
+                    position: absolute;
+                    display: block;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &__span {
+                @include fsz-label();
+                font-weight: 400;
+            }
         }
+
         &-map {
             width: 70%;
         }
