@@ -4,25 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z - Своих не бросаем</title>
+    <title>Своих не бросаем</title>
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/style.min.css">
     <script src="./js/map.min.js" defer></script>
     <script src="./js/gallery.min.js" defer></script>
+    <script src="./js/menu.min.js" defer></script>
 </head>
 
-<body>
+<body>   
     <header class="header">
         <div class="inner__wrapper">
             <div class="logo">
                 <a href="#" class="logo__link">
                     <img class="logo__img" src="./images/logo2.png" alt="Z - Своих не бросаем">
-                    <!-- <h1 class="logo__title">Z - Своих не бросаем</h1> -->
                 </a>
             </div>
+            <button class="header__burger" type="button">
+                <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="line__top" d="M3 6.00098H21" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                    <path class="line__middle" d="M3 12.001H21" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                    <path class="line__bottom" d="M3 18.001H21" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" />
+                </svg>
+            </button>
             <div class="header__info">
                 <nav class="header_menu">
-                    <button class="header_menu__burger" type="button">X</button>
                     <ul class="header_menu__list">
                         <li class="header_menu__item"><a class="header_menu__item-link" href="#about">Наша миссия</a>
                         </li>
@@ -86,12 +95,12 @@
                     <path class="road"
                         d="m 23.537188,13.832969 3.201509,1.537248 1.333961,1.470409 1.800849,0.200511 1.600754,2.539799 0.533585,2.807146 0.466887,1.06939 1.867546,1.203062 -0.133396,0.534695 0.466886,0.668368 1.000472,0.133674 1.333962,-0.06684 2.467829,1.269899 1.600754,0.267347 1.600754,0.735205 1.267264,1.2699 0.533585,1.537247 0.600283,2.205614 1.534056,0.601532 2.334433,1.336736 -2.975158,3.773418 c -2.290629,0.940842 -2.830632,0.674624 -1.658875,2.842886 0.663759,2.8117 0.806056,3.0623 -1.650814,4.249649 L 40.27436,47.80253 h -3.783074 l -2.437383,-0.784326 -2.12602,1.594516 -1.328763,0.664381 -3.91985,1.528077 -0.930134,2.325335 -1.926705,2.923278 -2.85684,-0.398629 -1.594515,0.797257 -1.301,2.8"
                         id="path234-0-0" />
+                    <text x="-10" y="85" class="city__text-lnr">ЛНР</text>
+                    <text x="-40" y="82" class="city__text-dnr">ДНР</text>
+                    <text x="-13" y="85" class="city__text-zaporozhye">Запорожская область</text>
+                    <text x="-67" y="28" class="city__text-kherson">Херсонская область</text>
+                    <text x="-6" y="16" class="city__text-kherson">Москва</text>
                 </svg>
-                <div class="main__banner-city city__moscow">Москва</div>
-                <div class="main__banner-city city__kherson">Херсонская область</div>
-                <div class="main__banner-city city__zaporozhye">Запорожская область</div>
-                <div class="main__banner-city city__dnr">ДНР</div>
-                <div class="main__banner-city city__lnr">ЛНР</div>
             </div>
             <div class="main__info">
                 <img class="main__info-coaimg" src="./images/organizers/timiryazevo.png"
@@ -107,11 +116,22 @@
         </div>
     </section>
     <section id="about" class="about">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Наша миссия</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="about__header"><span>Наша миссия</span></h3>
-            <p class="about__text">Своих не бросаем! От Тимирязевского района Москвы мобилизовано и отправились
-                добровольцами более 120
-                человек. ...</p>
+            <div class="about__content">
+                <div class="about__content-text">
+                    <h4 class="about__content-header">Своих не бросаем!</h4>
+                    От Тимирязевского района Москвы мобилизовано и отправились
+                    добровольцами более 120
+                    человек. ...</div>
+                <aside class="about__content-aside">
+                    <img src="./images/uaz.png" alt="УАЗ с гуманитарной помощью для бойцов СВО">
+                </aside>
+            </div>
         </div>
     </section>
     <section id="needs" class="needs">
@@ -268,7 +288,7 @@
     </section>
     <section id="organizers" class="organizers">
         <div class="inner__wrapper">
-            <h3 class="organizers"><span>Организаторы</span></h3>
+            <h3 class="organizers__header"><span>Организаторы</span></h3>
             <ul class="organizers__list">
                 <li class="organizers__item">
                     <a class="organizers__link" href="https://er.ru/" target="_blank">
@@ -309,7 +329,6 @@
             <div class="logo">
                 <a href="#" class="logo__link">
                     <img class="logo__img" src="./images/logo2.png" alt="Z - Своих не бросаем">
-                    <!-- <h1 class="logo__title">Z - Своих не бросаем</h1> -->
                 </a>
             </div>
             <div class="addr">
