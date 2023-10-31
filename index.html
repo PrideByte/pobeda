@@ -7,12 +7,13 @@
     <title>Своих не бросаем</title>
     <link rel="icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="./css/style.min.css">
+    <script src="./js/menu.min.js" defer></script>
     <script src="./js/map.min.js" defer></script>
     <script src="./js/gallery.min.js" defer></script>
-    <script src="./js/menu.min.js" defer></script>
+    <script src="./js/moreVideoBtn.min.js" defer></script>
 </head>
 
-<body>   
+<body>
     <header class="header">
         <div class="inner__wrapper">
             <div class="logo">
@@ -22,12 +23,12 @@
             </div>
             <button class="header__burger" type="button">
                 <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                    <path class="line__top" d="M3 6.00098H21" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2" />
-                    <path class="line__middle" d="M3 12.001H21" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2" />
-                    <path class="line__bottom" d="M3 18.001H21" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2" />
+                    <path class="line__top" d="M3 6.00098H21" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" />
+                    <path class="line__middle" d="M3 12.001H21" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" />
+                    <path class="line__bottom" d="M3 18.001H21" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" />
                 </svg>
             </button>
             <div class="header__info">
@@ -127,7 +128,8 @@
                     <h4 class="about__content-header">Своих не бросаем!</h4>
                     От Тимирязевского района Москвы мобилизовано и отправились
                     добровольцами более 120
-                    человек. ...</div>
+                    человек. ...
+                </div>
                 <aside class="about__content-aside">
                     <img src="./images/uaz.png" alt="УАЗ с гуманитарной помощью для бойцов СВО">
                 </aside>
@@ -135,8 +137,12 @@
         </div>
     </section>
     <section id="needs" class="needs">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Запросы участников СВО</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="needs__header"><span>Запросы участников СВО</span></h3>
             <p class="needs__description">Участники СВО нуждаются в поддержке снаряжением и предметами первой
                 необходимости.<br>
                 Здесь Вы можете узнать что именно необходимо.</p>
@@ -164,8 +170,12 @@
         </div>
     </section>
     <section id="addresses" class="addresses">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Пункты приема гуманитарной помощи</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="addresses__header"><span>Пункты приема гуманитарной помощи</span></h3>
             <div class="addresses__map">
                 <article class="addresses__map-list">
                     <address class="addresses__map-list__addr">
@@ -183,8 +193,12 @@
         </div>
     </section>
     <section id="payment" class="payment">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Финансовая помощь</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="payment__header"><span>Финансовая помощь</span></h3>
             <p class="payment__description">Вы можете помочь участникам СВО финансово. Деньги тратятся на закупку
                 необходимого снаряжения и оборудования</p>
             <div class="payment__details">
@@ -218,8 +232,12 @@
         </div>
     </section>
     <section id="letter" class="letter">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Написать письмо бойцам</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="letter__header"><span>Написать письмо бойцам</span></h3>
             <p class="letter__description">Здесь Вы можете выразить слова поддержки бойцам, оставив текстовое сообщение.
             </p>
             <form class="letter__form" action="#">
@@ -239,8 +257,12 @@
         </div>
     </section>
     <section id="gallery" class="gallery">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Галерея</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="gallery__header"><span>Галерея</span></h3>
             <div class="gallery__slider">
                 <button class="gallery__button" type="button"><span class="gallery__button-left"></span></button>
                 <div class="gallery__wrapper">
@@ -262,33 +284,74 @@
         </div>
     </section>
     <section id="video_gallery" class="video_gallery">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Видео-галерея</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="video_gallery__header"><span>Видео-галерея</span></h3>
             <ul class="video_gallery__gallery">
                 <li class="video_gallery__video">
-                    <iframe src="https://www.youtube.com/embed/V8LBTTmEalY?si=Hso73NV1wY4TnFyw"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    <iframe src="https://vk.com/video_ext.php?oid=-158072199&id=456239514&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
                         allowfullscreen></iframe>
                 </li>
                 <li class="video_gallery__video">
-                    <iframe src="https://www.youtube.com/embed/V8LBTTmEalY?si=Hso73NV1wY4TnFyw"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    <iframe src="https://vk.com/video_ext.php?oid=693531343&id=456239209&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
                         allowfullscreen></iframe>
                 </li>
                 <li class="video_gallery__video">
-                    <iframe src="https://www.youtube.com/embed/V8LBTTmEalY?si=Hso73NV1wY4TnFyw"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    <iframe src="https://vk.com/video_ext.php?oid=693531343&id=456239192&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
+                        allowfullscreen></iframe>
+                </li>
+                <li class="video_gallery__video">
+                    <iframe src="https://vk.com/video_ext.php?oid=693531343&id=456239188&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
+                        allowfullscreen></iframe>
+                </li>
+            </ul>
+            <button class="video_gallery__more" type="button">Больше видео</button>
+            <ul class="video_gallery__gallery video_gallery__gallery-more">
+                <li class="video_gallery__video">
+                    <iframe src="https://vk.com/video_ext.php?oid=-195238698&id=456239827&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
+                        allowfullscreen></iframe>
+                </li>
+                <li class="video_gallery__video">
+                    <iframe src="https://vk.com/video_ext.php?oid=693531343&id=456239173&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
+                        allowfullscreen></iframe>
+                </li>
+                <li class="video_gallery__video">
+                    <iframe src="https://vk.com/video_ext.php?oid=693531343&id=456239172&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
+                        allowfullscreen></iframe>
+                </li>
+                <li class="video_gallery__video">
+                    <iframe src="https://vk.com/video_ext.php?oid=693531343&id=456239164&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
+                        allowfullscreen></iframe>
+                <li class="video_gallery__video">
+                    <iframe src="https://vk.com/video_ext.php?oid=693531343&id=456239154&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
+                        allowfullscreen></iframe>
+                <li class="video_gallery__video">
+                    <iframe src="https://vk.com/video_ext.php?oid=-145285977&id=456239892&hd=2"
+                        allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0"
                         allowfullscreen></iframe>
                 </li>
             </ul>
         </div>
     </section>
     <section id="organizers" class="organizers">
+        <h3 class="about__header">
+            <div class="inner__wrapper">
+                <span>Организаторы</span>
+            </div>
+        </h3>
         <div class="inner__wrapper">
-            <h3 class="organizers__header"><span>Организаторы</span></h3>
             <ul class="organizers__list">
                 <li class="organizers__item">
                     <a class="organizers__link" href="https://er.ru/" target="_blank">
