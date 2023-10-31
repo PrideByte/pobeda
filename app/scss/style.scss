@@ -105,7 +105,6 @@ $fw-bold: 700;
     font-size: var(--fsz-menu);
 
     @media screen and (max-width: $size-1000) {
-        /* clamp(10px, calc(10px + 1vw),16px) */
         font-size: clamp(calc(var(--fsz-menu) * var(--fsz-multiplier)),
                 calc((var(--fsz-menu) * var(--fsz-multiplier)) + 1vw),
                 var(--fsz-menu));
@@ -218,6 +217,10 @@ h6 {
         padding: 0 20px;
         background-color: #fff;
     }
+
+    @media screen and (max-width: 850px) {
+        @include fsz-main();
+    }
 }
 
 a,
@@ -266,7 +269,8 @@ input[type="button"]:active,
 input[type="button"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-    outline: 1px solid $clr-gray-700;
+    outline: none;
+    border: none;
 }
 
 button:disabled {
@@ -513,12 +517,6 @@ svg path {
         box-shadow: none;
         z-index: 15;
 
-        &:active,
-        &:focus {
-            outline: none;
-            border: none;
-        }
-
         svg {
             width: 30px;
             height: 30px;
@@ -756,12 +754,6 @@ svg path {
 
 //******Needs******
 .needs {
-    &__header {
-        @media screen and (max-width: 320px) {
-            @include fsz-main();
-        }
-    }
-
     &__description {
         margin-bottom: 20px;
     }
@@ -882,12 +874,6 @@ svg path {
 
 //******Addresses******
 .addresses {
-    &__header {
-        @media screen and (max-width: 850px) {
-            @include fsz-main();
-        }
-    }
-
     &__map {
         display: flex;
         flex-direction: row;
@@ -972,12 +958,6 @@ svg path {
 
 //******Payment******
 .payment {
-    &__header {
-        @media screen and (max-width: 850px) {
-            @include fsz-main();
-        }
-    }
-
     &__description {
         margin-bottom: 20px;
     }
@@ -1047,12 +1027,6 @@ svg path {
 
 //******Letter******
 .letter {
-    &__header {
-        @media screen and (max-width: 850px) {
-            @include fsz-main();
-        }
-    }
-
     &__form {
         max-width: 500px;
         margin: 0 auto;
@@ -1176,12 +1150,6 @@ svg path {
         }
     }
 
-    &__button:active,
-    &__button:focus {
-        border: none;
-        outline: none;
-    }
-
     @media screen and (max-width: 1420px) {
         --items-to-show: 3;
     }
@@ -1203,18 +1171,27 @@ svg path {
 
 //******Video******
 .video_gallery {
-    &__header {
-        @media screen and (max-width: 850px) {
-            @include fsz-main();
-        }
-    }
-
     &__gallery {
         display: flex;
         gap: 20px;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+
+        &-more {
+            display: none;
+
+            &__active {
+                display: flex;
+            }
+        }
+    }
+
+    &__more {
+        position: relative;
+        left: 50%;
+        margin: 20px 0;
+        transform: translateX(-50%);
     }
 
     &__video {
@@ -1237,12 +1214,6 @@ svg path {
 
 //******Organizers******
 .organizers {
-    &__header {
-        @media screen and (max-width: 850px) {
-            @include fsz-main();
-        }
-    }
-
     &__list {
         display: flex;
         align-items: stretch;
